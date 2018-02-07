@@ -39,10 +39,8 @@ namespace AzureSearch
             {
                 SearchParameters sp = new SearchParameters()
                 {
-                    SearchMode = SearchMode.Any,
-                    Top = 10,
-                    Select = new List<String> { "category" },
-                    Facets = new List<String> { "category" }
+                    SearchMode = SearchMode.All,
+                    Top = 10
                 };
 
                 return indexClient.Documents.Search(searchText, sp);
